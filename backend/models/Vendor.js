@@ -6,9 +6,11 @@ const vendorSchema = new mongoose.Schema({
   address: String,
   email: String,
   contactPersonName: String,
-  contactPersonMobile: String,
-  contactPersonEmail: String,
-  vendorCode: String // Will be generated during registration
-});
+  contactMobile: String,
+  contactEmail: String,
+  password: String,
+  vendorCode: String,
+  customerId: String
+}, { timestamps: true });
 
 module.exports = mongoose.model('Vendor', vendorSchema);
